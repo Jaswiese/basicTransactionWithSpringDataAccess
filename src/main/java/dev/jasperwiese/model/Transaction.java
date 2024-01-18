@@ -20,7 +20,6 @@ public class Transaction {
     }
 
     public Transaction(BigDecimal amount, ZonedDateTime timestamp, String reference, String bankSlogan) {
-        this.id = UUID.randomUUID().toString();
         this.amount = amount;
         this.timestamp = timestamp;
         this.reference = reference;
@@ -28,7 +27,6 @@ public class Transaction {
     }
 
     public Transaction( BigDecimal amount, ZonedDateTime timestamp, String reference, String bankSlogan, String inputUser) {
-        this.id = UUID.randomUUID().toString();
         this.amount = amount;
         this.timestamp = timestamp;
         this.reference = reference;
@@ -74,6 +72,14 @@ public class Transaction {
 
     public void setBankSlogan(String bankSlogan) {
         this.bankSlogan = bankSlogan;
+    }
+
+    public String getInputUser() {
+        return inputUser;
+    }
+
+    public void setInputUser(String inputUser) {
+        this.inputUser = inputUser;
     }
 
     @Override
